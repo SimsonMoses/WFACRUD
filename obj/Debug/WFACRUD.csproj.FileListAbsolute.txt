@@ -1,0 +1,9 @@
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\WFACRUD.exe.config
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\WFACRUD.exe
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\WFACRUD.pdb
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.csproj.AssemblyReference.cache
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.Properties.Resources.resources
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.csproj.GenerateResource.cache
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.csproj.CoreCompileInputs.cache
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.exe
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.pdb
