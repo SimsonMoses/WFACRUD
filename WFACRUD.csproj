@@ -8,7 +8,8 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WFACRUD</RootNamespace>
     <AssemblyName>WFACRUD</AssemblyName>
-    <TargetFrameworkVersion>net7.0-windows</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
