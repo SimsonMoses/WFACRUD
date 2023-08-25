@@ -49,5 +49,5 @@ D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\System.Security.Acce
 D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\System.Security.Principal.Windows.xml
 D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\programmingWorld\dotnet\sampleProjects\WFACRUD\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.Form1.resources
 D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.csproj.CopyComplete
+D:\programmingWorld\dotnet\sampleProjects\WFACRUD\obj\Debug\WFACRUD.WAFPage.resources
