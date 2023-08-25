@@ -1,4 +1,5 @@
 ﻿using Amazon.Runtime.Internal.Util;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,7 @@ namespace WFACRUD
             textBox2.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
             textBox3.Text = dataGridView1.Rows[0].Cells[2 ].Value.ToString();
 
-
         }
-
 
         public Form1()
         {
@@ -64,6 +63,19 @@ namespace WFACRUD
         {
             Student s = new Student(textBox2.Text,Double.Parse(textBox3.Text)); 
             collection.InsertOne(s);
+            ReadAllDocuments();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var  updateDef = Builders<Student>.Update.Set("name",textBox2.Text).Set("gpa",textBox3.Text);
+            collection.UpdateOne(s => s.Id == ObjectId.Parse(textBox1.Text), updateDef);
+            ReadAllDocuments();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            collection.DeleteOne(s=>s.Id == ObjectId.Parse(textBox1.Text));
             ReadAllDocuments();
         }
     }
