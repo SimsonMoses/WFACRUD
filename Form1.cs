@@ -14,7 +14,7 @@ using WFACRUD.model;
 
 namespace WFACRUD
 {
-    public partial class Form1 : Form
+    public partial class WAFPage : Form
     {
 
         static MongoClient client = new MongoClient();
@@ -24,25 +24,20 @@ namespace WFACRUD
         public void ReadAllDocuments()
         {
             List<Student> studentsList = collection.AsQueryable().ToList<Student>();
-            dataGridView1.DataSource = studentsList;
-            textBox1.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[0].Cells[2 ].Value.ToString();
+            dataView.DataSource = studentsList;
+            Id.Text = dataView.Rows[0].Cells[0].Value.ToString();
+            txtName.Text = dataView.Rows[0].Cells[1].Value.ToString();
+            GPA.Text = dataView.Rows[0].Cells[2 ].Value.ToString();
 
         }
 
-        public Form1()
+        public WAFPage()
         {
             InitializeComponent();
             ReadAllDocuments();
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -54,29 +49,54 @@ namespace WFACRUD
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();    
+            Id.Text = dataView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtName.Text = dataView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            GPA.Text = dataView.Rows[e.RowIndex].Cells[2].Value.ToString();    
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student s = new Student(textBox2.Text,Double.Parse(textBox3.Text)); 
+            Student s = new Student(txtName.Text,Double.Parse(GPA.Text)); 
             collection.InsertOne(s);
             ReadAllDocuments();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var  updateDef = Builders<Student>.Update.Set("name",textBox2.Text).Set("gpa",textBox3.Text);
-            collection.UpdateOne(s => s.Id == ObjectId.Parse(textBox1.Text), updateDef);
+            var  updateDef = Builders<Student>.Update.Set("name",txtName.Text).Set("gpa",GPA.Text);
+            collection.UpdateOne(s => s.Id == ObjectId.Parse(Id.Text), updateDef);
             ReadAllDocuments();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            collection.DeleteOne(s=>s.Id == ObjectId.Parse(textBox1.Text));
+            collection.DeleteOne(s=>s.Id == ObjectId.Parse(Id.Text));
             ReadAllDocuments();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GPA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
