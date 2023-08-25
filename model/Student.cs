@@ -16,7 +16,6 @@ namespace WFACRUD.model
         public string Name { get; set; }
         [BsonElement("gpa")]
         public Double Gpa { get; set; }
-
         public Student (string  name, Double gpa)
         {
             Name = name;
